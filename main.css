@@ -1,5 +1,28 @@
 body{
     margin:0%;
+    background-color:white;
+    color:black;
+}
+/* coupon section */
+#main{
+    opacity: 0.2;
+    z-index: 1;
+}
+#coupon{
+    height:320px;
+    width:30%;
+    /* background-color:blue; */
+    z-index: 100;
+    position:absolute;
+    margin-top:-35%;
+    margin-left:36%;
+    visibility:hidden;
+    opacity:1;
+}
+/*  */
+.dark{
+    background-color:black;
+    color:white;
 }
 /* header section */
 /* .responsive{

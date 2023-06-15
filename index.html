@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Pantaloons</title>
-        <script src=""></script>
+        <script src="index.js"></script>
         <link rel="stylesheet" type="text/css" href="main.css">
         <link rel="icon" href="images/pantaloonsicon.jpeg">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,10 +11,16 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script>
+            function changeMode(){
+                let mybody = document.body;
+                mybody.classList.toggle('dark')
+            }
+        </script>
     </head>
     <body>
         <!-- header section -->
-        <header>
+        <header id="main">
             <div class="row" style="background-color:#fef3bd;">
                 <div class="col-xs-6 responsive">
                     <span class="sp"><i>Hi There!</i></span>
@@ -26,6 +32,7 @@
                     <span class="sp4">GIFTCARD</span>
                     <span class="sp5">STORE LOCATOR</span>
                     <span class="sp6">TRACK ORDER</span>
+                    <button onclick="changeMode()" style="text-decoration:none; border:none; border-radius:10px;"><img src="images/nightswitch.webp" cursor="pointer" alt="darklight" style="height:20px; width:40px; background-size:cover; background-attachment:fixed; width:100%; background-repeat:no-repeat;"></button>
                 </div>
                 <div class="col-xs-12">
                     <span class="discount">
@@ -47,7 +54,6 @@
                     <img src="images/cart.png" alt="cart" class="acc">
                 </div>
             </div>
-        </header>
         <!-- image crousel section -->
         <div id="carousel">
             <div id="devCarousel" class="carousel slide" data-ride="carousel">
@@ -92,6 +98,14 @@
                 </div>
             </div>
         </div>
+        </header>
+        <div id="coupon">
+            <button onclick="closeCoupon()">&times;</button>
+            <img src="images/coupon.jpg" alt="coupon" style="height:100%; width:100%;">
+        </div>
+        <script>
+            window.onload = loadCoupon()
+        </script>
          <!-- category section -->
          <div class="cate">
             <h3><i>Deals of the Day</i></h3>
